@@ -1,5 +1,6 @@
 import "./setting.css";
 import Sidebar from "../../components/sidebar/Sidebar";
+import gojo from "../../assets/images/gojo.jpeg"
 import { FaUser } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
@@ -45,6 +46,7 @@ export default function Settings() {
       dispatch({type:"UPDATE_FAILURE"})
     }
   };
+  const photo= user.profilePic ? PF+user.profilePic:gojo ;
 
   return (
     <div className="settings">
@@ -56,7 +58,7 @@ export default function Settings() {
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="settingsPP">
-            <img src={file ? URL.createObjectURL(file): PF+user.profilePic} alt="" />
+            <img src={file ? URL.createObjectURL(file): photo} alt="" />
             <label htmlFor="fileInput">
               <FaUser />
             </label>

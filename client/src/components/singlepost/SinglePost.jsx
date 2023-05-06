@@ -22,7 +22,7 @@ function SinglePost() {
     try {
       const getPost = async () => {
         const res = await axios.get("/posts/" + path);
-        console.log(res)
+        // console.log(res)
         setPost(res.data);
         setTitle(res.data.title);
         setDesc(res.data.desc);
