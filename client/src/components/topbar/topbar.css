@@ -9,15 +9,13 @@
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
 }
-
+.gojo{
+    object-fit: cover;
+}
 .topleft , .topright{
-    /* padding: 0 10px; */
-
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     flex:3;
-    /* background-color: blueviolet; */
 }
 .topleft>div{
     padding: 0px 40px;
@@ -43,13 +41,9 @@
 .topright>div>*{
     margin: 20px;
     cursor: pointer;
-    /* width: 3px;
-    height: 30px;
-    font-weight: 400; */
 }
 .topcenter{
     flex: 6;
-    /* background-color: aqua; */
 }
 
 .topcenter ul{

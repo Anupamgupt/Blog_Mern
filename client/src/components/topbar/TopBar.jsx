@@ -63,7 +63,7 @@ function TopBar() {
           {user ?( 
             <Link to="/setting">
               <div className="imgcontainer">
-                  <img src={PF+user.profilePic} alt="" />
+                  <img className="gojo" src={user.profilePic? PF+user.profilePic:gojo} alt="" />
                 </div>
             </Link>) :
             (
